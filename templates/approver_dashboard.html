@@ -1,0 +1,1 @@
+<h2>Approver Dashboard</h2>{% for ticket in tickets %}<form method='POST' action='/approve_ticket'>ID:<input name='ticket_id' value='{{ loop.index0 }}' readonly>Decision:<select name='decision'><option value='Approved'>Approve</option><option value='Rejected'>Reject</option></select><button type='submit'>Submit</button></form>{% endfor %}
